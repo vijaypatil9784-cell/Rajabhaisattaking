@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raja Bhai Shatka Matka King | Raja Bhai Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700;800&family=Poppins:wght@700;900&display=swap');
+        
+        body { background-color: #050505; color: #ffffff; font-family: 'Mukta', sans-serif; overflow-x: hidden; }
+        .raja-bhai-font { font-family: 'Poppins', sans-serif; }
+        
+        /* Gold & Neon Effects */
+        .gold-text { background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .premium-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(15px); border: 1px solid rgba(191, 149, 63, 0.3); border-radius: 20px; }
+        
+        /* UNIQUE POP-UP COLOR ANIMATION FOR GAMES */
+        @keyframes neonPop {
+            0% { color: #FFD700; text-shadow: 0 0 10px #FFD700; transform: scale(1); }
+            33% { color: #00FF00; text-shadow: 0 0 20px #00FF00; transform: scale(1.05); }
+            66% { color: #00FFFF; text-shadow: 0 0 20px #00FFFF; transform: scale(1); }
+            100% { color: #FFD700; text-shadow: 0 0 10px #FFD700; transform: scale(1); }
+        }
+        .market-popup { animation: neonPop 3s infinite; display: inline-block; font-weight: 800; letter-spacing: 1px; }
+
+        /* Floating Finger Animation */
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .pointer-animation { animation: bounce 1s infinite; }
+
+        /* King Profile Section */
+        .profile-container { position: relative; width: 120px; height: 120px; margin: 0 auto 15px; }
+        .profile-img { 
+            width: 100%; height: 100%; border-radius: 50%; 
+            border: 4px solid #bf953f; object-fit: cover; 
+            background: radial-gradient(circle, #2a2a2a, #000);
+            box-shadow: 0 0 30px rgba(191, 149, 63, 0.7); 
+        }
+        .crown-icon {
+            position: absolute; top: -25px; left: 50%; transform: translateX(-50%);
+            font-size: 40px; color: #FFD700; filter: drop-shadow(0 0 10px gold);
+        }
+
+        #adminModal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 1000; justify-content: center; align-items: center; }
+        video, iframe { border-radius: 15px; width: 100%; aspect-ratio: 16/9; box-shadow: 0 10px 40px rgba(0,0,0,0.8); }
+    </style>
+</head>
+<body>
+
+    <nav class="flex justify-between items-center p-5 bg-black/50 border-b border-yellow-900/30">
+        <div class="text-xl font-black gold-text italic raja-bhai-font">RAJA BHAI</div>
+        <div class="text-yellow-500 font-bold text-xs uppercase tracking-tighter italic">100% असली किंग</div>
+    </nav>
+
+    <section class="text-center py-6 px-4">
+        
+        <div class="profile-container">
+            <i class="fas fa-crown crown-icon"></i>
+            <img src="https://img.icons8.com/color/144/king.png" id="profile-pic" class="profile-img" alt="King">
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-black mb-1 raja-bhai-font">RAJA BHAI</h1>
+        <div class="text-xl font-bold gold-text mb-6 uppercase italic">⚡ सट्टा मटका किंग ⚡</div>
+
+        <div class="max-w-xl mx-auto mb-6 p-5 rounded-2xl bg-white/5 border border-yellow-600/20 shadow-xl">
+            <div class="market-popup text-xl md:text-3xl mb-2">
+                ★ SRI DEVI ★ TIME BAZAR ★
+            </div><br>
+            <div class="market-popup text-xl md:text-3xl mb-2" style="animation-delay: 1s;">
+                ★ MILAN DAY ★ KALYAN ★ DAY NIGHT ★
+            </div>
+            <p class="text-yellow-500 text-sm font-bold uppercase mt-3 tracking-[0.2em]">सभी मार्केट का फिक्स गेम यहाँ मिलता है</p>
+        </div>
+        
+        <div class="max-w-3xl mx-auto mb-10">
+            <div class="premium-card p-2 border-2 border-yellow-600/30">
+                <div id="video-wrapper">
+                    <iframe id="display-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    <video id="display-video" controls class="hidden"></video>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-white leading-tight px-4 shadow-black text-shadow">
+                100% फिक्स गेम के लिए अभी ज्वाइन करें
+            </h2>
+            <div class="pointer-animation text-6xl my-6">
+                <i class="fas fa-hand-point-down text-yellow-500"></i>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+            <a id="wa-btn" href="#" target="_blank" class="w-80 py-6 rounded-2xl bg-green-600 font-bold text-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-2xl shadow-green-900/40">
+                <i class="fab fa-whatsapp text-4xl"></i> व्हाट्सएप ग्रुप
+            </a>
+            <a id="tg-btn" href="#" target="_blank" class="w-80 py-6 rounded-2xl bg-blue-600 font-bold text-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-2xl shadow-blue-900/40">
+                <i class="fab fa-telegram text-4xl"></i> टेलीग्राम ज्वाइन
+            </a>
+        </div>
+
+        <div class="mt-14 space-y-4 font-bold text-lg md:text-2xl italic">
+            <p class="text-yellow-500">⭐ पासिंग की 101% गारंटी ⭐</p>
+            <p class="text-white">⭐ ईमानदारी का दूसरा नाम: RAJA BHAI ⭐</p>
+            <p class="gold-text">⭐ आपका भरोसा ही हमारी असली कमाई है ⭐</p>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center border-t border-white/5 opacity-20 mt-10">
+        <p class="text-[10px] tracking-widest uppercase">Official Landing Page By Raja Bhai King</p>
+        <button onclick="openAdmin()" class="mt-4 text-[10px] underline cursor-pointer">ADMIN ACCESS</button>
+    </footer>
+
+    <div id="adminModal">
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-yellow-600 w-full max-w-md mx-4 shadow-2xl">
+            <h2 class="text-2xl font-bold text-yellow-500 mb-6 text-center italic">Dashboard</h2>
+            <div class="space-y-4 text-left">
+                <label class="text-[10px] text-gray-400 uppercase ml-2">Profile Photo URL</label>
+                <input type="text" id="admin-photo" class="w-full bg-black border border-gray-800 p-4 rounded-xl text-white outline-none focus:border-yellow-600" placeholder="Paste image link">
+                
+                <label class="text-[10px] text-gray-400 uppercase ml-2">WhatsApp Group Link</label>
+                <input type="text" id="admin-wa" class="w-full bg-black border border-gray-800 p-4 rounded-xl text-white outline-none focus:border-yellow-600" placeholder="https://chat.whatsapp.com/...">
+                
+                <label class="text-[10px] text-gray-400 uppercase ml-2">Telegram Channel Link</label>
+                <input type="text" id="admin-tg" class="w-full bg-black border border-gray-800 p-4 rounded-xl text-white outline-none focus:border-yellow-600" placeholder="https://t.me/...">
+                
+                <label class="text-[10px] text-gray-400 uppercase ml-2">Video URL (YT/MP4)</label>
+                <input type="text" id="admin-video" class="w-full bg-black border border-gray-800 p-4 rounded-xl text-white outline-none focus:border-yellow-600" placeholder="YouTube Link">
+                
+                <button onclick="saveChanges()" class="w-full py-4 bg-yellow-600 rounded-xl font-black text-black uppercase mt-4 hover:bg-yellow-500 transition-colors">Apply Changes</button>
+                <button onclick="closeAdmin()" class="w-full text-gray-500 text-xs mt-4">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ADMIN_PASSWORD = "Lokesh123"; 
+
+        function openAdmin() {
+            let pass = prompt("Enter Admin Password:");
+            if(pass === ADMIN_PASSWORD) {
+                document.getElementById('adminModal').style.display = 'flex';
+            } else {
+                alert("Access Denied!");
+            }
+        }
+
+        function closeAdmin() {
+            document.getElementById('adminModal').style.display = 'none';
+        }
+
+        function saveChanges() {
+            const photo = document.getElementById('admin-photo').value;
+            const wa = document.getElementById('admin-wa').value;
+            const tg = document.getElementById('admin-tg').value;
+            const vid = document.getElementById('admin-video').value;
+
+            if(photo) document.getElementById('profile-pic').src = photo;
+            if(wa) document.getElementById('wa-btn').href = wa;
+            if(tg) document.getElementById('tg-btn').href = tg;
+            
+            if(vid) {
+                const iframe = document.getElementById('display-iframe');
+                const videoPlayer = document.getElementById('display-video');
+                if(vid.includes('.mp4')) {
+                    iframe.classList.add('hidden');
+                    videoPlayer.classList.remove('hidden');
+                    videoPlayer.src = vid;
+                } else {
+                    videoPlayer.classList.add('hidden');
+                    iframe.classList.remove('hidden');
+                    iframe.src = vid.replace("watch?v=", "embed/");
+                }
+            }
+            alert("Sab Kuch Update Ho Gaya Hai!");
+            closeAdmin();
+        }
+    </script>
+</body>
+</html>
