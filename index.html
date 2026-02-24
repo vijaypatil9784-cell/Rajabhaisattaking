@@ -90,7 +90,7 @@
                         src="https://player.cloudinary.com/embed/?cloud_name=daxj2bssg&public_id=VID-20260223-WA0001_o7j0nj" 
                         allow="autoplay; fullscreen; encrypted-media; picture-in-picture" 
                         allowfullscreen
-                        onload="hideLoader()">
+                        onload="document.getElementById('vid-loader').classList.add('hidden')">
                     </iframe>
                 </div>
             </div>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-            <a id="wa-btn" href="#" target="_blank" class="w-80 py-6 rounded-2xl bg-green-600 font-bold text-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-2xl shadow-green-900/40">
+            <a id="wa-btn" href="https://chat.whatsapp.com/EF8jWXlWXVP5uaj8z1YODQ" target="_blank" class="w-80 py-6 rounded-2xl bg-green-600 font-bold text-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-2xl shadow-green-900/40">
                 <i class="fab fa-whatsapp text-4xl"></i> व्हाट्सएप ग्रुप
             </a>
             <a id="tg-btn" href="#" target="_blank" class="w-80 py-6 rounded-2xl bg-blue-600 font-bold text-2xl flex items-center justify-center gap-3 transition-all active:scale-95 shadow-2xl shadow-blue-900/40">
@@ -144,8 +144,6 @@
     <script>
         const ADMIN_PASSWORD = "Lokesh123"; 
 
-        function hideLoader() { document.getElementById('vid-loader').classList.add('hidden'); }
-
         function openAdmin() {
             let pass = prompt("Enter Admin Password:");
             if(pass === ADMIN_PASSWORD) document.getElementById('adminModal').style.display = 'flex';
@@ -153,7 +151,6 @@
 
         function closeAdmin() { document.getElementById('adminModal').style.display = 'none'; }
 
-        // --- डेटा सेव करने का फिक्स ---
         function saveChanges() {
             const data = {
                 photo: document.getElementById('admin-photo').value,
@@ -173,11 +170,8 @@
                 if(savedData.photo) document.getElementById('profile-pic').src = savedData.photo;
                 if(savedData.wa) document.getElementById('wa-btn').href = savedData.wa;
                 if(savedData.tg) document.getElementById('tg-btn').href = savedData.tg;
-                if(savedData.video) {
-                    document.getElementById('vid-loader').classList.remove('hidden');
-                    document.getElementById('display-iframe').src = savedData.video;
-                }
-                // Fill inputs again
+                if(savedData.video) document.getElementById('display-iframe').src = savedData.video;
+                
                 document.getElementById('admin-photo').value = savedData.photo || "";
                 document.getElementById('admin-wa').value = savedData.wa || "";
                 document.getElementById('admin-tg').value = savedData.tg || "";
